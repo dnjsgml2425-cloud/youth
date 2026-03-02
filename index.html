@@ -3,54 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Youth - 청춘의 기록</title>
+  <title>청년스코어 - 청년 정책 및 취업 정보 가이드</title>
+  <meta name="description" content="청년들을 위한 맞춤형 정책 정보, 취업 팁, 주거 지원 등 다양한 정보를 제공하는 청년스코어입니다.">
   <link href='style.css' rel='stylesheet'>
-  <!-- Lucide Icons for better visuals -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <nav>
-    <div class="logo">YOUTH</div>
+    <div class="logo">청년스코어</div>
+    <div class="nav-links">
+      <a href="#policies">청년정책</a>
+      <a href="#jobs">취업정보</a>
+      <a href="#finance">금융팁</a>
+    </div>
     <button id="theme-toggle">🌙 모드 전환</button>
   </nav>
 
   <main>
     <section class="hero">
-      <h1 class="animate-up">당신의 청춘을 기록하세요</h1>
-      <p class="animate-up delay-1">이곳은 당신의 생각과 감정이 머무는 공간입니다.</p>
+      <h1 class="animate-up">청년들의 꿈을 수치로 바꾸다, 청년스코어</h1>
+      <p class="animate-up delay-1">취업, 주거, 금융 정보를 한눈에 확인하고 당신의 내일을 준비하세요.</p>
       <div class="cta-buttons animate-up delay-2">
-        <button class="primary-btn" onclick="startInteraction()">지금 시작하기</button>
-        <button class="secondary-btn" onclick="scrollToSection('features')">더 알아보기</button>
+        <button class="primary-btn" onclick="scrollToSection('policies')">오늘의 정책 확인하기</button>
       </div>
     </section>
 
-    <section id="features" class="features">
-      <div class="card" onclick="showQuote()">
-        <i data-lucide="heart"></i>
-        <h3>오늘의 영감</h3>
-        <p id="quote-text">클릭하여 오늘의 한 마디를 확인하세요.</p>
+    <!-- 실질적인 콘텐츠 섹션 1: 정책 정보 -->
+    <section id="policies" class="content-section">
+      <h2 class="section-title">맞춤형 청년 정책</h2>
+      <div class="features">
+        <div class="card" onclick="location.href='#';">
+          <i data-lucide="building"></i>
+          <h3>청년 주거 지원</h3>
+          <p>청년 월세 지원, 전세자금 대출 등 주거 안정을 위한 최신 정보를 확인하세요.</p>
+        </div>
+        <div class="card" onclick="location.href='#';">
+          <i data-lucide="graduation-cap"></i>
+          <h3>교육 및 자기계발</h3>
+          <p>내일배움카드, 전문 교육 과정 등 역량 강화를 위한 지원 사업을 소개합니다.</p>
+        </div>
+        <div class="card" onclick="location.href='#';">
+          <i data-lucide="users"></i>
+          <h3>공간 및 커뮤니티</h3>
+          <p>청년들이 자유롭게 이용할 수 있는 전국 청년 센터 정보를 제공합니다.</p>
+        </div>
       </div>
-      <div class="card" onclick="changeVibe()">
-        <i data-lucide="zap"></i>
-        <h3>분위기 전환</h3>
-        <p>배경 색상을 랜덤하게 변경하여 기분을 전환해보세요.</p>
-      </div>
-      <div class="card" id="timer-card">
-        <i data-lucide="clock"></i>
-        <h3>머문 시간</h3>
-        <p id="stay-timer">00:00:00</p>
+    </section>
+
+    <!-- 실질적인 콘텐츠 섹션 2: 뉴스레터/아티클 예시 (애드센스 통과용) -->
+    <section id="articles" class="articles-section">
+      <h2 class="section-title">최신 청년 가이드</h2>
+      <div class="article-grid">
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=400&q=80" alt="금융팁">
+          <div class="article-body">
+            <span class="category">금융</span>
+            <h3>사회초년생을 위한 적금 추천 TOP 5</h3>
+            <p>이율 높은 적금 상품과 우대 금리 조건까지 상세히 정리했습니다.</p>
+            <a href="#" class="read-more">더 읽어보기 &rarr;</a>
+          </div>
+        </article>
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80" alt="취업팁">
+          <div class="article-body">
+            <span class="category">취업</span>
+            <h3>합격을 부르는 자소서 작성법</h3>
+            <p>현직 인사담당자가 말하는 자소서의 핵심 포인트와 예시 문항 분석.</p>
+            <a href="#" class="read-more">더 읽어보기 &rarr;</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Youth Project. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-logo">청년스코어</div>
+      <div class="footer-links">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+        <a href="#">문의하기</a>
+      </div>
+      <p>&copy; 2026 청년스코어. All rights reserved.</p>
+    </div>
   </footer>
 
   <script defer src="main.js"></script>
-  <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
