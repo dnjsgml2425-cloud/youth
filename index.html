@@ -1,16 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Theme Switcher App</title>
+  <title>Youth - 청춘의 기록</title>
   <link href='style.css' rel='stylesheet'>
+  <!-- Lucide Icons for better visuals -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <button id="theme-toggle" style="z-index: 1000; font-weight: bold;">🌙 Switch Mode</button>
-  <h1>Welcome to Our App</h1>
-  <p>Try switching between Light and Dark mode!</p>
-  <button onclick="console.log('Action performed!');">Common Action</button>
-  <script defer type="text/javascript" src="main.js"></script>
+  <nav>
+    <div class="logo">YOUTH</div>
+    <button id="theme-toggle">🌙 모드 전환</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1 class="animate-up">당신의 청춘을 기록하세요</h1>
+      <p class="animate-up delay-1">이곳은 당신의 생각과 감정이 머무는 공간입니다.</p>
+      <div class="cta-buttons animate-up delay-2">
+        <button class="primary-btn" onclick="startInteraction()">지금 시작하기</button>
+        <button class="secondary-btn" onclick="scrollToSection('features')">더 알아보기</button>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="card" onclick="showQuote()">
+        <i data-lucide="heart"></i>
+        <h3>오늘의 영감</h3>
+        <p id="quote-text">클릭하여 오늘의 한 마디를 확인하세요.</p>
+      </div>
+      <div class="card" onclick="changeVibe()">
+        <i data-lucide="zap"></i>
+        <h3>분위기 전환</h3>
+        <p>배경 색상을 랜덤하게 변경하여 기분을 전환해보세요.</p>
+      </div>
+      <div class="card" id="timer-card">
+        <i data-lucide="clock"></i>
+        <h3>머문 시간</h3>
+        <p id="stay-timer">00:00:00</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Youth Project. All rights reserved.</p>
+  </footer>
+
+  <script defer src="main.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
 </body>
 </html>
